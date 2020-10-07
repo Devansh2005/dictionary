@@ -19,13 +19,13 @@ def dic_word(words):
 
     elif len(get_close_matches(word,file.keys())) > 0:                                # close match word
         print("Did you mean %s instead" %get_close_matches(word,file.keys())[0])      #cutoff argument is not present
-        decide=input("Press y for Yes and n for NO \n")
+        decide=input("Press Y for Yes and N for NO \n")
         if decide =="y" or "Y":
             return file[get_close_matches(word,file.keys())[0]]
         elif decide=="n" or "N":
             print("Word does not exist")
         else:
-            print("Abey Y ya N type krna tha bc")
+            print("Either Press Y or N")
 
     else:
         print("We dont have this word in the dictionary")
